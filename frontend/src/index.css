@@ -1,0 +1,161 @@
+/* =========================================================
+   MARKETHUB GLOBAL DESIGN SYSTEM & THEME (INDEX.CSS)
+   Exact Match for MarketHub SaaS Portal & Login UI
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* MarketHub Theme Palette */
+  --ah-bg: #07090e;
+  --ah-bg-alt: #0e1420;
+  --ah-surface: #0e1420;
+  --ah-surface-raised: #151d2d;
+  --ah-surface-solid: #090e17;
+  --ah-border: rgba(255, 255, 255, 0.07);
+  --ah-border-strong: #1a2333;
+  --ah-border-glow: rgba(0, 242, 254, 0.4);
+
+  --ah-text: #ffffff;
+  --ah-text-muted: #8a99ad;
+  --ah-text-dim: #5a687b;
+
+  /* Vibrant Cyan & Teal Palette */
+  --ah-accent: #00f2fe;
+  --ah-accent-dark: #00b8c4;
+  --ah-accent-light: #4facfe;
+  --ah-accent-glow: 0 0 25px rgba(0, 242, 254, 0.45);
+  --ah-accent-gradient: linear-gradient(135deg, #00f2fe 0%, #00d2ff 100%);
+
+  --ah-secondary: #3b82f6;
+  --ah-purple: #8b5cf6;
+  --ah-pink: #ec4899;
+  --ah-success: #10b981;
+  --ah-danger: #ef4444;
+
+  --ah-radius-lg: 24px;
+  --ah-radius: 12px;
+  --ah-radius-sm: 8px;
+  --ah-radius-pill: 9999px;
+
+  --ah-glass-blur: blur(28px) saturate(180%);
+  --ah-shadow-card: 0 16px 40px rgba(0, 0, 0, 0.65);
+  --ah-brand-spacing: 0.12em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  background-color: #07090e;
+}
+
+body {
+  margin: 0;
+  background-color: #07090e;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.08) 0%, transparent 65%),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 36px 36px, 36px 36px;
+  background-position: 0 0, -1px -1px, -1px -1px;
+  color: var(--ah-text);
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07090e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 242, 254, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ah-accent);
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(0, 242, 254, 0.35);
+  color: #ffffff;
+}
+
+/* Keyframe Animations */
+@keyframes ah-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px var(--ah-accent), 0 0 20px rgba(0, 242, 254, 0.4);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 4px var(--ah-accent), 0 0 8px rgba(0, 242, 254, 0.2);
+    opacity: 0.7;
+  }
+}
+
+@keyframes ah-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ah-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes ah-hero-slideshow {
+  0%, 30% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  33%, 63% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  66%, 96% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes ah-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes ah-badge-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
